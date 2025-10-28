@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0e0f12;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-app-region: drag;
+  overflow: hidden;
+}
+
+.clock-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rectangle {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  opacity: 0.5;
+  transition: all 1s ease-in-out;
+  mix-blend-mode: screen;
+  border-radius: 0px;
+}
+
+#hours-rect {
+  background: black;
+  background-image: repeating-linear-gradient(
+    14deg,
+    transparent,
+    transparent 5px,
+    white 5px,
+    white 6px
+  );
+  width: 240px;
+  height: 240px;
+}
+
+#minutes-rect {
+  background: black;
+  background-image: repeating-linear-gradient(
+    15deg,
+    transparent,
+    transparent 5px,
+    white 5px,
+    white 6px
+  );
+  width: 200px;
+  height: 200px;
+}
+
+#seconds-rect {
+  background: black;
+  background-image: repeating-linear-gradient(
+    16deg,
+    transparent,
+    transparent 5px,
+    white 5px,
+    white 6px
+  );
+  width: 160px;
+  height: 160px;
+}
+
+.stat, .time {
+  display: none;
+}

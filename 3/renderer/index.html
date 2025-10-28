@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CC</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="circles-container"></div>
+    </div>
+    <div class="wrap-absolute">
+      <div id="you-name">You: <span id="you-coords">...</span></div>
+      <div id="friend-name">Friend: <span id="friend-coords">...</span></div>
+    </div>
+
+    <div id="time" class="time">00:00:00</div>
+    <div class="stat">Battery: <span id="batteria">...</span>%</div>
+    <div class="stat">CPU Load: <span id="cpu">...</span>%</div>
+    <div class="stat">RAM Usage: <span id="ram">...</span>%</div>
+    <div class="stat">Mouse Position: <span id="mouse-coords">--</span></div>
+
+    <!-- Uptime -->
+    <div class="stat">Uptime: <span id="uptime">00:00:00</span></div>
+    <!-- Termometro CPU -->
+    <div class="stat">
+      CPU Thermometer<br />
+      <span id="cpu-thermometer-label">0%</span>
+    </div>
+    
+    <!-- Audio Volume Slider -->
+    <div class="stat">
+      Personal Audio Volume<br />
+      <input type="range" id="personal-volume-slider" min="0" max="100" value="100" step="1" />
+      <span id="volume-label">100%</span>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="render.js"></script>
+    <script src="db.js"></script>
+  </body>
+</html>
