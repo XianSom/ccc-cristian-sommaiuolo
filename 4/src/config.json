@@ -1,0 +1,34 @@
+{
+  "widget": {
+    "defaultPosition": {
+      "x": -320,
+      "y": 20
+    },
+    "defaultSize": {
+      "width": 300,
+      "height": 200
+    },
+    "theme": "dark",
+    "transparency": 0.9,
+    "alwaysOnTop": true,
+    "updateIntervals": {
+      "clock": 1000,
+      "systemInfo": 5000,
+      "weather": 600000
+    },
+    "features": {
+      "draggable": true,
+      "resizable": false,
+      "notes": true,
+      "systemMonitor": true,
+      "weather": true,
+      "quickActions": true
+    }
+  },
+  "shortcuts": {
+    "toggleNotes": "CmdOrCtrl+N",
+    "quit": "CmdOrCtrl+Q", 
+    "minimize": "CmdOrCtrl+H",
+    "toggle": "CmdOrCtrl+W"
+  }
+}

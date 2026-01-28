@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-container">
+        <!-- Tooltip per CPU e RAM -->
+        <div id="stats-tooltip" class="stats-tooltip">
+            <div class="tooltip-row">
+                <span class="tooltip-label">CPU:</span>
+                <span id="tooltip-cpu-value" class="tooltip-value">0%</span>
+            </div>
+            <div class="tooltip-row">
+                <span class="tooltip-label">RAM:</span>
+                <span id="tooltip-ram-value" class="tooltip-value">0%</span>
+            </div>
+        </div>
+        
+        <!-- Sezione animazione Circle1 -->
+        <div class="circle-animation-section">
+            <img id="circle-animation" class="circle-animation" src="../Circle1/00000.svg" alt="Circle Animation" draggable="false" />
+            <!-- Cerchio con bordo rosso al centro -->
+            <div class="red-border-circle"></div>
+            <!-- Canvas per forma d'onda - indipendente dal cerchio rosso -->
+            <canvas id="waveform-canvas" width="180" height="180"></canvas>
+        </div>
+    </div>
+
+    <script src="widget.js"></script>
+</body>
+</html>

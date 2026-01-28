@@ -1,0 +1,50 @@
+{
+  "name": "performance-monitor-widget",
+  "version": "1.0.0",
+  "description": "Un widget desktop di monitoraggio prestazioni (CPU, RAM, Batteria) creato con Electron e Node.js",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-mac": "electron-builder --mac",
+    "build-win": "electron-builder --win",
+    "build-linux": "electron-builder --linux"
+  },
+  "keywords": ["electron", "widget", "desktop", "performance", "monitor", "cpu", "ram", "battery", "nodejs"],
+  "author": "Cristian Sommaiuolo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.aoki.desktop-widget",
+    "productName": "Performance Monitor Widget",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "AUDIO/**/*",
+      "Circle1/**/*", 
+      "CircleClose/**/*",
+      "CircleOpen/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "assets/icona.icns",
+      "category": "public.app-category.utilities",
+      "identity": null
+    },
+    "win": {
+      "icon": "assets/icon-512.png",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "assets/icon-512.png",
+      "category": "Utility"
+    }
+  }
+}
